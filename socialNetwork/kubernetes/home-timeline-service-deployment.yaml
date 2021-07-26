@@ -27,7 +27,7 @@ spec:
       containers:
         - command:
             - HomeTimelineService
-          image: yg397/social-network-microservices:latest
+          image: registry.k8s.local/dsb/social-network-microservices:latest
           name: home-timeline-service
           ports:
             - containerPort: 9090

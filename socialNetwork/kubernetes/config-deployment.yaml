@@ -28,7 +28,7 @@ spec:
         - command:
             - python3
             - ./scripts/config.py
-          image: yg397/social-network-microservices:latest
+          image: registry.k8s.local/dsb/social-network-microservices:latest
           name: config
           resources: {}
           volumeMounts:

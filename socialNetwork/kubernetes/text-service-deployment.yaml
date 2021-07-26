@@ -27,7 +27,7 @@ spec:
       containers:
         - command:
             - TextService
-          image: yg397/social-network-microservices:latest
+          image: registry.k8s.local/dsb/social-network-microservices:latest
           name: text-service
           ports:
             - containerPort: 9090

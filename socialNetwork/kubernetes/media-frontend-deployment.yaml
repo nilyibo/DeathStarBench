@@ -25,7 +25,7 @@ spec:
         io.kompose.service: media-frontend
     spec:
       containers:
-        - image: yg397/media-frontend:xenial
+        - image: registry.k8s.local/dsb/media-frontend:xenial
           name: media-frontend
           ports:
             - containerPort: 8080

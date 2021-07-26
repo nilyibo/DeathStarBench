@@ -25,7 +25,7 @@ spec:
         io.kompose.service: nginx-thrift
     spec:
       containers:
-        - image: yg397/openresty-thrift:xenial
+        - image: registry.k8s.local/dsb/openresty-thrift:xenial
           name: nginx-thrift
           ports:
             - containerPort: 8080
