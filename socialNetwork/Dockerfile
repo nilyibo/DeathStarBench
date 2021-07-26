@@ -1,4 +1,4 @@
-FROM yg397/thrift-microservice-deps:xenial
+FROM registry.k8s.local/dsb/thrift-microservice-deps:xenial
 
 ARG NUM_CPUS=40
 

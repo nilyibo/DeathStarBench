@@ -39,7 +39,7 @@ spec:
     spec:
       containers:
       - name: media-frontend
-        image: yg397/media-frontend:xenial
+        image: registry.k8s.local/dsb/media-frontend:xenial
         ports: 
         - containerPort: 8080
         volumeMounts:
