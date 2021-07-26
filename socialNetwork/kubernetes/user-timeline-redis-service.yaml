@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f ../docker-compose.yml --volumes hostPath
+    kompose.version: 1.23.0 (bc7d9f4f)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: user-timeline-redis
+  name: user-timeline-redis
+spec:
+  ports:
+    - name: "6383"
+      port: 6383
+      targetPort: 6379
+  selector:
+    io.kompose.service: user-timeline-redis
+status:
+  loadBalancer: {}

@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f ../docker-compose.yml --volumes hostPath
+    kompose.version: 1.23.0 (bc7d9f4f)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: config
+  name: config
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: config
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f ../docker-compose.yml --volumes hostPath
+        kompose.version: 1.23.0 (bc7d9f4f)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: config
+    spec:
+      containers:
+        - command:
+            - python3
+            - ./scripts/config.py
+          image: yg397/social-network-microservices:latest
+          name: config
+          resources: {}
+          volumeMounts:
+            - mountPath: /social-network-microservices/config
+              name: config-hostpath0
+            - mountPath: /usr/local/openresty/nginx/conf/nginx.conf
+              name: config-hostpath1
+      hostname: config
+      restartPolicy: Always
+      volumes:
+        - hostPath:
+            path: /home/yig004/Source/envirocloud/k8s/DeathStarBench/socialNetwork/config
+          name: config-hostpath0
+        - hostPath:
+            path: /home/yig004/Source/envirocloud/k8s/DeathStarBench/socialNetwork/nginx-web-server/conf/nginx.conf
+          name: config-hostpath1
+status: {}
