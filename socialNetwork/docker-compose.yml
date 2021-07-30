@@ -15,7 +15,7 @@ services:
     image: registry.k8s.local/dsb/social-network-microservices:latest
     hostname: social-graph-service
     ports:
-      - 10000:9090
+      - 9090:9090
     restart: always
     entrypoint: SocialGraphService
     volumes:
@@ -26,7 +26,7 @@ services:
     image: mongo
     hostname: social-graph-mongodb
     ports:
-      - 27018:27017
+      - 27017:27017
     restart: always
     command: --config /social-network-microservices/config/mongod.conf
     volumes:
@@ -37,7 +37,7 @@ services:
     image: redis
     hostname: social-graph-redis
     ports:
-      - 6380:6379
+      - 6379:6379
     restart: always
     command: /social-network-microservices/config/redis.conf
     volumes:
@@ -48,7 +48,7 @@ services:
     image: redis
     hostname: home-timeline-redis
     ports:
-      - 6381:6379
+      - 6379:6379
     restart: always
     command: /social-network-microservices/config/redis.conf
     volumes:
@@ -59,7 +59,7 @@ services:
     image: registry.k8s.local/dsb/social-network-microservices:latest
     hostname: compose-post-service
     ports:
-      - 10001:9090
+      - 9090:9090
     restart: always
     entrypoint: ComposePostService
     volumes:
@@ -70,7 +70,7 @@ services:
     image: registry.k8s.local/dsb/social-network-microservices:latest
     hostname: post-storage-service
     ports:
-      - 10002:9090
+      - 9090:9090
     restart: always
     entrypoint: PostStorageService
     volumes:
@@ -81,14 +81,14 @@ services:
     image: memcached
     hostname: post-storage-memcached
     ports:
-      - 11212:11211
+      - 11211:11211
     restart: always
 
   post-storage-mongodb:
     image: mongo
     hostname: post-storage-mongodb
     ports:
-      - 27019:27017
+      - 27017:27017
     restart: always
     command: --config /social-network-microservices/config/mongod.conf
     volumes:
@@ -99,7 +99,7 @@ services:
     image: registry.k8s.local/dsb/social-network-microservices:latest
     hostname: user-timeline-service
     ports:
-      - 10003:9090
+      - 9090:9090
     restart: always
     entrypoint: UserTimelineService
     volumes:
@@ -110,7 +110,7 @@ services:
     image: redis
     hostname: user-timeline-redis
     ports:
-      - 6383:6379
+      - 6379:6379
     restart: always
     command: /social-network-microservices/config/redis.conf
     volumes:
@@ -121,7 +121,7 @@ services:
     image: mongo
     hostname: user-timeline-mongodb
     ports:
-      - 27020:27017
+      - 27017:27017
     restart: always
     command: --config /social-network-microservices/config/mongod.conf
     volumes:
@@ -132,7 +132,7 @@ services:
     image: registry.k8s.local/dsb/social-network-microservices:latest
     hostname: url-shorten-service
     ports:
-      - 10004:9090
+      - 9090:9090
     restart: always
     entrypoint: UrlShortenService
     volumes:
@@ -143,14 +143,14 @@ services:
     image: memcached
     hostname: url-shorten-memcached
     ports:
-      - 11213:11211
+      - 11211:11211
     restart: always
 
   url-shorten-mongodb:
     image: mongo
     hostname: url-shorten-mongodb
     ports:
-      - 27021:27017
+      - 27017:27017
     restart: always
     command: --config /social-network-microservices/config/mongod.conf
     volumes:
@@ -161,7 +161,7 @@ services:
     image: registry.k8s.local/dsb/social-network-microservices:latest
     hostname: user-service
     ports:
-      - 10005:9090
+      - 9090:9090
     restart: always
     entrypoint: UserService
     volumes:
@@ -172,14 +172,14 @@ services:
     image: memcached
     hostname: user-memcached
     ports:
-      - 11214:11211
+      - 11211:11211
     restart: always
 
   user-mongodb:
     image: mongo
     hostname: user-mongodb
     ports:
-      - 27023:27017
+      - 27017:27017
     restart: always
     command: --config /social-network-microservices/config/mongod.conf
     volumes:
@@ -190,7 +190,7 @@ services:
     image: registry.k8s.local/dsb/social-network-microservices:latest
     hostname: media-service
     ports:
-      - 10006:9090
+      - 9090:9090
     restart: always
     entrypoint: MediaService
     volumes:
@@ -201,14 +201,14 @@ services:
     image: memcached
     hostname: media-memcached
     ports:
-      - 11215:11211
+      - 11211:11211
     restart: always
 
   media-mongodb:
     image: mongo
     hostname: media-mongodb
     ports:
-      - 27024:27017
+      - 27017:27017
     restart: always
     command: --config /social-network-microservices/config/mongod.conf
     volumes:
@@ -219,7 +219,7 @@ services:
     image: registry.k8s.local/dsb/social-network-microservices:latest
     hostname: text-service
     ports:
-      - 10007:9090
+      - 9090:9090
     restart: always
     entrypoint: TextService
     volumes:
@@ -230,7 +230,7 @@ services:
     image: registry.k8s.local/dsb/social-network-microservices:latest
     hostname: unique-id-service
     ports:
-      - 10008:9090
+      - 9090:9090
     restart: always
     entrypoint: UniqueIdService
     volumes:
@@ -241,7 +241,7 @@ services:
     image: registry.k8s.local/dsb/social-network-microservices:latest
     hostname: user-mention-service
     ports:
-      - 10009:9090
+      - 9090:9090
     restart: always
     entrypoint: UserMentionService
     volumes:
@@ -252,7 +252,7 @@ services:
     image: registry.k8s.local/dsb/social-network-microservices:latest
     hostname: home-timeline-service
     ports:
-      - 10010:9090
+      - 9090:9090
     restart: always
     entrypoint: HomeTimelineService
     volumes:
@@ -278,7 +278,7 @@ services:
     image: registry.k8s.local/dsb/media-frontend:xenial
     hostname: media-frontend
     ports:
-      - 8081:8080
+      - 8080:8080
     restart: always
     volumes:
       - ./media-frontend/lua-scripts:/usr/local/openresty/nginx/lua-scripts
