@@ -1,28 +1,28 @@
 {
   "secret": "secret",
   "social-graph-service": {
-    "addr": "social-graph-service",
+    "addr": "social-graph-service.social-network.svc.cluster.local",
     "port": 9090,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "social-graph-mongodb": {
-    "addr": "social-graph-mongodb",
+    "addr": "social-graph-mongodb.social-network.svc.cluster.local",
     "port": 27017,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "social-graph-redis": {
-    "addr": "social-graph-redis",
+    "addr": "social-graph-redis.social-network.svc.cluster.local",
     "port": 6379,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "write-home-timeline-service": {
-    "addr": "write-home-timeline-service",
+    "addr": "write-home-timeline-service.social-network.svc.cluster.local",
     "port": 9090,
     "workers": 32,
     "connections": 512,
@@ -30,77 +30,77 @@
     "keepalive_ms": 10000
   },
   "write-home-timeline-rabbitmq": {
-    "addr": "write-home-timeline-rabbitmq",
+    "addr": "write-home-timeline-rabbitmq.social-network.svc.cluster.local",
     "port": 5672,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "home-timeline-redis": {
-    "addr": "home-timeline-redis",
+    "addr": "home-timeline-redis.social-network.svc.cluster.local",
     "port": 6379,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "compose-post-service": {
-    "addr": "compose-post-service",
+    "addr": "compose-post-service.social-network.svc.cluster.local",
     "port": 9090,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "compose-post-redis": {
-    "addr": "compose-post-redis",
+    "addr": "compose-post-redis.social-network.svc.cluster.local",
     "port": 6379,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "user-timeline-service": {
-    "addr": "user-timeline-service",
+    "addr": "user-timeline-service.social-network.svc.cluster.local",
     "port": 9090,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "user-timeline-mongodb": {
-    "addr": "user-timeline-mongodb",
+    "addr": "user-timeline-mongodb.social-network.svc.cluster.local",
     "port": 27017,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "user-timeline-redis": {
-    "addr": "user-timeline-redis",
+    "addr": "user-timeline-redis.social-network.svc.cluster.local",
     "port": 6379,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "post-storage-service": {
-    "addr": "post-storage-service",
+    "addr": "post-storage-service.social-network.svc.cluster.local",
     "port": 9090,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "post-storage-mongodb": {
-    "addr": "post-storage-mongodb",
+    "addr": "post-storage-mongodb.social-network.svc.cluster.local",
     "port": 27017,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "post-storage-memcached": {
-    "addr": "post-storage-memcached",
+    "addr": "post-storage-memcached.social-network.svc.cluster.local",
     "port": 11211,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "unique-id-service": {
-    "addr": "unique-id-service",
+    "addr": "unique-id-service.social-network.svc.cluster.local",
     "port": 9090,
     "connections": 512,
     "timeout_ms": 10000,
@@ -108,49 +108,49 @@
     "netif": "eth0"
   },
   "media-service": {
-    "addr": "media-service",
+    "addr": "media-service.social-network.svc.cluster.local",
     "port": 9090,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "text-service": {
-    "addr": "text-service",
+    "addr": "text-service.social-network.svc.cluster.local",
     "port": 9090,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "user-mention-service": {
-    "addr": "user-mention-service",
+    "addr": "user-mention-service.social-network.svc.cluster.local",
     "port": 9090,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "url-shorten-service": {
-    "addr": "url-shorten-service",
+    "addr": "url-shorten-service.social-network.svc.cluster.local",
     "port": 9090,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "url-shorten-memcached": {
-    "addr": "url-shorten-memcached",
+    "addr": "url-shorten-memcached.social-network.svc.cluster.local",
     "port": 11211,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "url-shorten-mongodb": {
-    "addr": "url-shorten-mongodb",
+    "addr": "url-shorten-mongodb.social-network.svc.cluster.local",
     "port": 27017,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "user-service": {
-    "addr": "user-service",
+    "addr": "user-service.social-network.svc.cluster.local",
     "port": 9090,
     "connections": 512,
     "timeout_ms": 10000,
@@ -158,21 +158,21 @@
     "netif": "eth0"
   },
   "user-memcached": {
-    "addr": "user-memcached",
+    "addr": "user-memcached.social-network.svc.cluster.local",
     "port": 11211,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "user-mongodb": {
-    "addr": "user-mongodb",
+    "addr": "user-mongodb.social-network.svc.cluster.local",
     "port": 27017,
     "connections": 512,
     "timeout_ms": 10000,
     "keepalive_ms": 10000
   },
   "home-timeline-service": {
-    "addr": "home-timeline-service",
+    "addr": "home-timeline-service.social-network.svc.cluster.local",
     "port": 9090,
     "connections": 512,
     "timeout_ms": 10000,
