@@ -9,6 +9,7 @@ SRC_DIR="$(pwd)"
 DST_DIR=/data/k8s/deathstarbench/socialnetwork
 
 set -x
-pssh-launch "rsync -ahvzP --delete $SRC_DIR/ $DST_DIR/"
-$DST_DIR/kubernetes/kompose-and-run.sh
+rsync -ahvzP --delete $SRC_DIR/ $DST_DIR/
+# pssh-launch "rsync -ahvzP --delete $SRC_DIR/ $DST_DIR/"
+$DST_DIR/kubernetes/kompose-and-run.sh "$@"
 
